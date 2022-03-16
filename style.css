@@ -1,0 +1,141 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+body
+{
+    background: rgba(165, 42, 42, 0.151);
+    height: 100vh;
+}
+.loginhr
+{
+    width: 80%;
+    background: lightgray;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    border: 1px solid lightgray;
+}
+
+.fp-container
+{
+    margin-top: 35px;
+}
+.app-name{
+    text-align: center;
+
+}
+.app-name h1{
+    font-size: 55px;
+    font-weight: bold;
+}
+.form-wrapper
+{
+    width: 90%;
+    background: white;
+    border-radius: 17px;
+    margin: auto;
+    display: block;
+    height: 400px;
+
+}
+.entry
+{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 95%;
+    height: 45px;
+    border: 1px solid lightgray;
+}
+.entry:-moz-placeholder
+{
+    margin-left: 20px;
+    padding-left: 20px;
+}
+::-webkit-input-placeholder 
+{
+    margin-left: 20px;
+    padding-left: 20px;
+
+}
+.first-entry
+{
+    margin-top: 40px;
+}
+.post
+{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 95%;
+    height: 45px;
+    border-radius: 5000px;
+    border: 1px solid lightgray;
+    color: white;
+    background-color: brown;
+    font-weight: bold;
+
+}
+.amnesia
+{
+    text-align: center;
+    margin-top: 10px;
+    font-size: small;
+}
+.loginForm
+{
+    background-color: #fff;
+    display: grid;
+    width: 95%;
+    border-radius: 17px;
+    margin: auto;
+    margin-top: 35px;
+    box-shadow: 2px 2px 8px #888888;
+
+    
+}
+input::placeholder
+{
+    padding-left: 10px;
+    
+}
+.create
+{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 95%;
+    height: 45px;
+    border-radius: 5000px;
+    border: 1px solid lightgray;
+    color: white;
+    background-color:  brown;
+    font-weight: bold;
+
+}
+.signup
+{
+    position: fixed;
+    place-content: center;
+    background-color: rgba(245, 245, 245, 0.5);
+    display: grid;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.signup form
+{
+    background-color: white;
+    width: 90vw;
+    margin: auto;
+    height: 400px;
+}
+.signup form label, input
+{
+    display: block;
+}
