@@ -113,8 +113,16 @@ input::placeholder
     border-radius: 5000px;
     border: 1px solid lightgray;
     color: white;
-    background-color:  brown;
+    background-color:  #C19A6B;
     font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    display: grid;
+
+}
+#signup-form
+{
+    display: none;
 
 }
 .signup
@@ -133,9 +141,119 @@ input::placeholder
     background-color: white;
     width: 90vw;
     margin: auto;
-    height: 400px;
+    min-height: max-content;
+    border-radius: 17px;
 }
 .signup form label, input
 {
     display: block;
+}
+.head
+{
+    font-size: xx-large;
+    font-weight: bold;
+    margin-left: 7px;
+    margin-top: 7px;
+    display: flex;
+    justify-content: space-between;
+}
+.times
+{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.support-text
+{
+    margin-left: 7px;
+    color: #888888;
+}
+.name
+{
+    display: flex;
+    margin: auto;
+}
+.signup form input
+{
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    height: 35px;
+    margin: auto;
+    display: block;
+    margin-bottom: 15px;
+    background-color: rgba(218, 160, 109, 0.174);
+}
+.wide
+{
+    width: 96%;
+}
+.dob
+{
+    display: flex;
+    justify-content: space-between;
+}
+.dob select
+{
+    width: 30%;
+    height: 35px;
+    margin-top: 5px;
+    border: 1px solid lightgray;
+}
+.dob-left
+{
+    margin-left: 2%;
+}
+.dob-right
+{
+    margin-right: 2%;
+}
+.signup form label
+{
+    font-size: smaller;
+    margin-left: 2%;
+}
+.gender
+{
+    display: flex;
+    justify-content: space-between;
+}
+.checkgender
+{
+    display: flex;
+    width: 30%;
+    margin-top: 5px;
+    height: 35px;
+    border: 1px solid lightgray;
+    align-items: center;
+}
+.gender-label
+{
+    margin-top: 30px;
+
+}
+.gender-value
+{
+    margin-left: 5px;
+}
+.notice
+{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 10px;
+}
+.signup-button
+{
+    border: 1px solid #C19A6B;
+    color: #C19A6B;
+    height: 40px;
+    width: 150px;
+    border-radius: 12px;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+.signup-button:hover
+{
+    color: white;
+    background-color: #C19A6B;
 }
