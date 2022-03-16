@@ -29,6 +29,7 @@ body
 }
 .app-name h1{
     font-size: 55px;
+    color: #C19A6B;
     font-weight: bold;
 }
 .form-wrapper
@@ -75,7 +76,7 @@ body
     border-radius: 5000px;
     border: 1px solid lightgray;
     color: white;
-    background-color: brown;
+    background-color: #966919;
     font-weight: bold;
 
 }
@@ -143,6 +144,8 @@ input::placeholder
     margin: auto;
     min-height: max-content;
     border-radius: 17px;
+    box-shadow: 2px 2px 8px #888888;
+
 }
 .signup form label, input
 {
@@ -171,6 +174,10 @@ input::placeholder
 {
     display: flex;
     margin: auto;
+}
+.name-box
+{
+    width: 45%;
 }
 .signup form input
 {
