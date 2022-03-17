@@ -78,6 +78,7 @@ body
     color: white;
     background-color: #966919;
     font-weight: bold;
+    display: grid;
 
 }
 .amnesia
@@ -263,4 +264,211 @@ input::placeholder
 {
     color: white;
     background-color: #C19A6B;
+}
+.picture-container
+{
+    width: 100%;
+    margin-top: 45px;
+}
+.profile-pic
+{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.profile-pic img
+{
+    width: 190px;
+    height: 190px;
+    border-radius: 50% ;
+    display: block;
+    margin: auto;
+}
+.edit
+{
+    position: absolute;
+    top: 70%;
+    left: 60%;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #C19A6B;
+    color: #C19A6B;
+    border-radius: 50%;
+}
+.photo-upload
+{
+    position: fixed;
+    place-content: center;
+    background-color: rgba(245, 245, 245, 0.5);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: grid;
+}
+#drop-here
+{
+    display: none;
+
+}
+.photo-upload form
+{
+    margin: auto;
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 480px;
+    font-family: sans-serif;
+    margin: 100px auto;
+    padding: 20px;
+}
+.upload-close
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #C19A6B;
+}
+.name-area
+{
+    text-align: center;
+    margin-top: 10px;
+}
+.full-name
+{
+    font-size: 35px;
+    font-weight: bold;
+    color: #C19A6B;
+}
+.identity
+{
+    font-family: sans-serif;
+    color: #C19A6B;
+}
+.logout-button
+{
+    border: 1px solid #C19A6B;
+    color: #C19A6B;
+    height: 45px;
+    width: 20%;
+    border-radius: 16px;
+    position: absolute;
+    top: 95%;
+    left: 40%;
+}
+.hamburger
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.hamburger svg
+{
+ fill: #C19A6B;  
+ cursor: pointer; 
+}
+.logout-button:hover
+{
+    background-color: #C19A6B;
+    color: white;
+}
+.side-bar
+{
+    width: 45vw;
+    height: 60vh;
+    border-radius: 17px;
+    box-shadow:2px 2px 8px #888888 ;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999999;
+    background: #fff;
+    margin-top: 35px;
+    margin-right: 25px;
+}
+.side-hr
+{
+    width: 70%;
+    display: block;
+    margin-bottom: 20px;
+    margin: auto;
+}
+.logout-side-button
+{
+    border: 1px solid #C19A6B;
+    color: #C19A6B;
+    height: 45px;
+    width: 40%;
+    border-radius: 16px;
+    position: absolute;
+    top: 85%;
+    left: 30%;    
+}
+.logout-side-button:hover
+{
+    background-color: #C19A6B;
+    color: white;   
+}
+.side-close
+{
+    margin-bottom: 30px;
+    margin-top: 5px;
+    margin-right: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: #C19A6B;
+    cursor: pointer;
+}
+.bar-stuff-one
+{
+    text-align: center;
+    width: 90%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    height: 35px;
+    border-radius: 7px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.bar-stuff-one:hover
+{
+    background-color:  rgba(218, 160, 109, 0.174);
+    color: #C19A6B;    
+}
+.bar-stuff
+{
+    text-align: center;
+    
+    width: 90%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 35px;
+    border-radius: 7px;
+}
+.bar-stuff:hover
+{
+    background-color:  rgba(218, 160, 109, 0.174);
+    color: #C19A6B;
+}
+.nav-links
+{
+    text-decoration: none;
+    color: #C19A6B;
+    width: 100%;
+}
+#sidebar
+{
+    display: none;
 }
