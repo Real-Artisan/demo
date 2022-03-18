@@ -43,6 +43,37 @@ function toggleNavBar()
 
 }
 
+//More or less
+function moreOrLess()
+{
+  let box = document.getElementById("desc-foot");
+  let more = document.getElementById("show-more");
+  let less = document.getElementById("show-less");
+  if(box.style.height !== "max-content")
+  {
+    box.style.height = "max-content"
+  }
+  else
+  {
+    box.style.height = "400px"
+  }
+  if(more.style.display !== "none")
+  {
+    more.style.display = "none"
+  }
+  else
+  {
+    more.style.display = "block"
+  }
+  if(less.style.display !== "block")
+  {
+    less.style.display = "block"
+  }
+  else 
+  {
+    less.style.display = "none"
+  }
+}
 
 // drag and drop upload
 let dropSpace = document.getElementById("drop-here");

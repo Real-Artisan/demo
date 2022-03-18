@@ -550,6 +550,7 @@ E-commerce page styles
  width: 100vw;
  display: flex;
  overflow-x: auto;
+ overflow-y: hidden;
 }
 .ad img
 {
@@ -557,7 +558,248 @@ E-commerce page styles
     height: 120px;
     margin: 10px 5px;
 }
+.first-line, .second-line
+{
+    display: flex;
+    justify-content: space-between;
+}
 .tiles
 {
+    margin: 10px 5px;
+}
+.tile
+{
+    display: flex;
+    align-items: center;
+    width: 25%;
+    height: 56.333px;
+    margin: 5px 2.5px;
+    border-radius: 2px;
+}
+.first-line .tile
+{
+    margin: 5px 5px;
+}
+.tile svg
+{
+    width: 14px;
+    height: 14px;
+    margin-left: 10px;
+    fill: #fff;
+}
+.tile span
+{   
+    color: #fff;
+    margin-left: 5px;
+    text-align: center;
+    font-size: small;
+}
+.carb
+{
+    background-color: #C19A6B;
+}
+.red 
+{
+    background-color: red;
 
+}
+.navy
+{
+    background-color: rgb(2, 49, 27);
+
+}
+.jumia
+{
+    background-color: #966919;
+}
+.tile img 
+{
+    width: 100%;
+}
+.flash-sale
+{
+    width: 100%;
+    display: flex;
+    background-color: #966919;
+    color: white;
+    height: 60px;
+} 
+.flash-sale svg
+{
+    fill: red;
+    margin: 14px 5px;
+}
+.flash-sale .down, .flash-sale .right-end
+{
+    font-size: smaller;
+}
+.right-end
+{
+    margin-left: 40%;
+    margin-top: 5px;
+}
+.flash-text
+{
+    margin: 7px 5px;
+}
+.fast-stuff
+{
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.item-name
+{
+    font-family: sans-serif;
+    font-size: small;
+}
+.item-price
+{
+    font-weight: bold;
+    font-size: smaller;
+}
+.sample-item
+{
+    width: 350px;
+    height: 200px;
+    margin-left: 10px;
+}
+.first-sample
+{
+    margin-left: 10px;
+}
+.sample-item:hover
+{
+    width: 252px;
+    background-color: #fff;
+}
+.item-img
+{
+    width: 100px;
+}
+.old-price
+{
+    color: lightgray;
+    font-size: smaller;
+}
+.dont-miss img, .top-free img
+{
+    width: 190px;
+    margin: 10px 5px;
+}
+.dont-miss
+{
+    text-align: center;
+    margin: auto;
+    display: grid;
+}
+.set-a, .set-b
+{
+    margin: auto;
+}
+.miss-head
+{
+    font-size: small;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.ribbon
+{
+    text-align: center;
+    color: #fff;
+    background-color: blue;
+}
+.obj-cont
+{
+    text-align: center;
+}
+.obj-cont img
+{
+    width: 100%;
+    border-radius: 6px;
+}
+.obj-title
+{
+    font-size: small;
+}
+.coll-head
+{
+    text-align: center;
+    font-weight: bold;
+}
+.tiles-two
+{
+    margin: 10px 0;
+}
+.light-ribbon
+{
+    background: lightblue;
+}
+.tech-week
+{
+    text-align: center;
+}
+.tech-week img
+{
+    width: 96%;
+    height: 150px;
+    margin: 10px;
+}
+footer p 
+{
+    font-size: smaller;
+}
+.max-content
+{
+    min-height: max-content;
+}
+.desc-foot
+{
+    margin: 10px;
+    height: 400px;
+    overflow: hidden;
+}
+#show-more{
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    color: #966919;
+    margin: 10px 0;
+}
+#show-less{
+    display: none;
+    margin: 10px 0;
+    text-align: center;
+    color: #966919;
+    cursor: pointer;
+}
+.back-up
+{
+    color: #fff;
+}
+.scroller
+{
+    font-size: small;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(31, 30, 30);
+}
+.last-foot
+{
+    height: 100px;
+}
+.one-line
+{
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 10px;
+}
+.index-footer
+{
+    position: absolute;
+    text-align: center;
+    font-size: smaller;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
