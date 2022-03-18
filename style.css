@@ -472,3 +472,92 @@ input::placeholder
 {
     display: none;
 }
+
+/*
+E-commerce page styles
+*/
+
+.navigation
+{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.logo-img
+{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+.toggler
+{
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.nav-name
+{
+    font-weight: 130px;
+    font-family: sans-serif;
+}
+.logo
+{
+    display: flex;
+}
+.cart
+{
+    margin-right: 10px;
+    margin-left: 20px;
+}
+.search
+{
+    display: grid;
+    margin: auto;
+    width: 95%;
+    height: 30px;
+}
+.textbox
+{   
+    align-items: center;
+    margin: auto;
+    border: 1px solid #888888;
+    border-radius: 500px;
+}
+.textbox input
+{
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.textbox svg
+{
+    fill: #888888;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.shipment
+{
+    text-align: center;
+    background-color: #966919;
+    color: #fff;
+    margin-top: 10px;
+    height: 28px;
+}
+.ad
+{
+ height: 150px;   
+ width: 100vw;
+ display: flex;
+ overflow-x: auto;
+}
+.ad img
+{
+    width: 250px;
+    height: 120px;
+    margin: 10px 5px;
+}
+.tiles
+{
+
+}
