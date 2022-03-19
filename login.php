@@ -5,7 +5,7 @@
         include("database.php");
         include("engine.php");
 
-       if(isset($_POST["logMeIn"]))
+       if(isset($_POST["register"]))
        {
         if($_SERVER["REQUEST_METHOD"] == "POST")
         {
@@ -29,7 +29,7 @@
             }
         }
        }
-        if(isset($_POST["register"]))
+        if(isset($_POST["logMeIn"]))
         {
             if($_SERVER["REQUEST_METHOD"] == "POST")
         { 
