@@ -6,10 +6,10 @@
         $id = $_SESSION["user_id"];
         $query = "select * from users where user_id = `$id` limit 1";
 
-        $result = mysqli_query($db, $query);
-        if($result && mysqli_num_rows($result) > 0)
+        $result = pg_query($db, $query);
+        if($result && pg_num_rows($result) > 0)
         {
-             $user_data = mysqli_fetch_assoc($result);
+             $user_data = pg_fetch_assoc($result);
              return $user_data;
         }
     }

@@ -16,7 +16,7 @@
             {
                 $user_id = random(20);
                 $query = "insert into users (user_id,first_name,sur_name,email,password) values (`$user_id`,`$first_name`,`$sur_name`,`$email`,`$password`)";
-                mysqli_query($db,$query);
+                pg_query($db,$query);
                 header("Location: login.php");
                 die;
             }
@@ -34,13 +34,13 @@
             if(!empty($email) && !empty($password))
             {
                 $query = "select * from users where email = `$email` limit 1";
-                $result = mysqli_query($db,$query);
+                $result = pg_query($db,$query);
 
                 if($result)
                 {
-                    if($result && mysqli_num_rows($result) > 0)
+                    if($result && pg_num_rows($result) > 0)
                     {
-                         $user_data = mysqli_fetch_assoc($result);
+                         $user_data = pg_fetch_assoc($result);
 
                         if($user_data["password"] === $password)
                         {

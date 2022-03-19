@@ -6,5 +6,6 @@ $dbName = "scrapdb" ;
 
 if(!$db = pg_connect($dbHost,$dbUser,$dbPass,$dbName))
 {
-        dd("failed attempt to connect!");
+        echo ("failed attempt to connect!");
+        die;
 }
