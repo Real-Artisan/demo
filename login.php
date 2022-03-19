@@ -9,7 +9,7 @@
        {
         if($_SERVER["REQUEST_METHOD"] == "POST")
         {
-            $fisrt_name = $_POST["fname"];
+            $first_name = $_POST["fname"];
             $sur_name = $_POST["sname"];
             $email = $_POST["email"];
             $password = $_POST["password"];
@@ -17,10 +17,11 @@
             if(!empty($fisrt_name) && !empty($sur_name) && !empty($email) && !empty($password))
             {
                 $user_id = random(20);
-                $query = "insert into users (user_id,first_name,sur_name,email,password) values (`$user_id`,`$first_name`,`$sur_name`,`$email`,`$password`)";
-                pg_query($db,$query);
-                header("Location: login.php");
-                die;
+                $query = "insert into users (name,sname,password,email,user_id) values (`$first_name`,`$sur_name`,`$password`,`$email`,`$user_id`,)";
+                $result = mysqli_query($db,$query) or die("Error: ".mysql_error());
+               header("Location: login.php");
+                
+                return $result;
             }
             
             else
@@ -39,13 +40,13 @@
             if(!empty($email) && !empty($password))
             {
                 $query = "select * from users where email = `$email` limit 1";
-                $result = pg_query($db,$query);
+                $result = mysqli_query($db,$query);
 
                 if($result)
                 {
-                    if($result && pg_num_rows($result) > 0)
+                    if($result && mysqli_num_rows($result) > 0)
                     {
-                         $user_data = pg_fetch_assoc($result);
+                         $user_data = mysqli_fetch_assoc($result);
 
                         if($user_data["password"] === $password)
                         {
