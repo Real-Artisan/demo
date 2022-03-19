@@ -1,3 +1,14 @@
+<?php
+ session_start();
+ include("database.php");
+ include("engine.php");
+ include("logout.php");
+ $user_data = register($db);
+
+ $_SESSION;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +36,7 @@
         </a>
         <hr class="side-hr">
         
-        <button class="logout-side-button">Logout</button>
+        <button href="logout.php" class="logout-side-button">Logout</button>
     </div>
 <div class="picture-container">
     <div class="profile-pic">
@@ -34,8 +45,12 @@
     </div>
 </div>
 <div class="name-area">
-    <div class="full-name">Real Artisan</div>
-    <div class="identity">iwenyadaniel12@gmail.com</div>
+    <div class="full-name">
+        <?php echo $user_data["fname"]; ?>
+    </div>
+    <div class="identity"><?php 
+    echo $user_data["email"];?>
+    </div>
 </div>
 <div class="photo-upload" id="drop-here">
     <div onclick="toggleUpload()" class="upload-close">&times;</div>
@@ -45,7 +60,7 @@
         name="profile-photo" id="profile-photo">
     </form>
 </div>
-<button class="logout-button">Log Out</button>
+<button href="logout.php" class="logout-button">Log Out</button>
 <script src="script.js"></script>
 </body>
 

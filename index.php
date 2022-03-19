@@ -1,3 +1,11 @@
+<?php
+ session_start();
+ include("database.php");
+ include("engine.php");
+ $user_data = register($db);
+
+ $_SESSION;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

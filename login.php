@@ -1,3 +1,53 @@
+<?php
+
+
+    session_start();
+        include("database.php");
+        include("engine.php");
+
+        if($_SERVER["REQUEST_METHOD"] == "POST")
+        {
+            $fisrt_name = $_POST["fname"];
+            $sur_name = $_POST["sname"];
+            $email = $_POST["email"];
+            $password = $_POST["password"];
+
+            if(!empty($fisrt_name) && !empty($sur_name) && !empty($email) && !empty($password))
+            {
+                $user_id = random(20);
+                $query = "insert into users (user_id,first_name,sur_name,email,password) values (`$user_id`,`$first_name`,`$sur_name`,`$email`,`$password`)";
+                mysqli_query($db,$query);
+                header("Location: login.php");
+                die;
+            }
+            if(!empty($email) && !empty($password))
+            {
+                $query = "select * from users where email = `$email` limit 1";
+                $result = mysqli_query($db,$query);
+
+                if($result)
+                {
+                    if($result && mysqli_num_rows($result) > 0)
+                    {
+                         $user_data = mysqli_fetch_assoc($result);
+
+                        if($user_data["password"] === $password)
+                        {
+
+                            $_SESSION["user_id"] = $user_data["user_id"];
+                            header("Location: index.php");
+                            die;
+
+                        }
+                    }
+                }
+            }
+            else
+            {
+                return "Please Enter some valid data";
+            }
+        } 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,18 +93,18 @@
 
 <div id="signup-form">
     <div class="signup">
-        <form action="">
+        <form action="POST">
             <div class="head"><div >Sign Up</div>
                 <span onclick="toggleSignup()" class="times">&times;</span>
             </div>
             <div class="support-text">It's quick and easy.</div>
             <hr>
             <div class="name">
-                <input class="name-box" type="text" placeholder="First name">
-                <input class="name-box" type="text" placeholder="Surname">
+                <input class="name-box" name="fname" type="text" placeholder="First name">
+                <input class="name-box" type="text" name="sname" placeholder="Surname">
             </div>
-            <input class="wide" type="text" placeholder="Mobile number or email address">
-            <input class="wide" type="text" placeholder="New password">
+            <input class="wide" type="email" name="email" placeholder="Email Address">
+            <input class="wide" type="password" name="password" placeholder="New password">
             <label for="Date of birth">Date of birth</label>
             <div class="dob">
                 <select class="dob-left" name="day" id="day">
