@@ -4,7 +4,7 @@ $dbUser = "scrapdb" ;
 $dbPass = "kUruFa19KXtojBrC" ;
 $dbName = "scrapdb" ;
 
-if(!$db = mysqli_connect($dbHost,$dbUser,$dbPass,$dbName))
+if(!$db = pg_connect($dbHost,$dbUser,$dbPass,$dbName))
 {
         dd("failed attempt to connect!");
 }
