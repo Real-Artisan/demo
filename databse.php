@@ -5,7 +5,7 @@ $dbPort = "25060" ;
 $dbPass = "kUruFa19KXtojBrC" ;
 $dbName = "scrapdb" ;
 
-if(!$db = pg_connect("host=`$dbHost` posrt=`$dbPort`dbname=`$dbName` user=`$dbUser` password=`$dbPass` connect_timeout=10"))
+if(!$db = pg_connect("host=`$dbHost` posrt=`$dbPort`dbname=`$dbName` user=`$dbUser` password=`$dbPass`"))
 {
         echo ("failed attempt to connect!");
         die;
