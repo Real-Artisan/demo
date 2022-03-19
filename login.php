@@ -5,6 +5,8 @@
         include("database.php");
         include("engine.php");
 
+       if(isset($_POST["logMeIn"]))
+       {
         if($_SERVER["REQUEST_METHOD"] == "POST")
         {
             $fisrt_name = $_POST["fname"];
@@ -26,8 +28,11 @@
                 return "Please Enter some valid data";
             }
         }
-        if($_SERVER["REQUEST_METHOD"] == "POST")
+       }
+        if(isset($_POST["register"]))
         {
+            if($_SERVER["REQUEST_METHOD"] == "POST")
+        { 
             $email = $_POST["email"];
             $password = $_POST["password"];
             
@@ -53,6 +58,7 @@
                     }
                 }
             }
+        }
         } 
 ?>
 <!DOCTYPE html>
@@ -81,7 +87,7 @@
         <form class="loginForm" method="POST">
             <input class="entry first-entry" type="email" placeholder="Email Address">
             <input class="entry" type="password" placeholder="Password">
-            <input type="submit" class="post create-text" value="Login">
+            <input type="submit"  name="logMeIn"class="post create-text" value="Login">
             
             <div class="amnesia">
                 Forgotten password?
@@ -134,7 +140,7 @@
             <div class="notice">
                 By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. <br>You may receive SMS notifications from us and can opt out at any time.
             </div>
-            <input class="signup-button" type="submit" value="Sign Up" >
+            <input name="register" class="signup-button" type="submit" value="Sign Up" >
         
         </form>
     </div>
