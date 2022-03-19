@@ -20,6 +20,17 @@
                 header("Location: login.php");
                 die;
             }
+            
+            else
+            {
+                return "Please Enter some valid data";
+            }
+        }
+        if($_SERVER["REQUEST_METHOD"] == "POST")
+        {
+            $email = $_POST["email"];
+            $password = $_POST["password"];
+            
             if(!empty($email) && !empty($password))
             {
                 $query = "select * from users where email = `$email` limit 1";
@@ -41,10 +52,6 @@
                         }
                     }
                 }
-            }
-            else
-            {
-                return "Please Enter some valid data";
             }
         } 
 ?>
