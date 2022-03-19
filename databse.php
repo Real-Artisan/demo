@@ -1,7 +1,7 @@
 <?php
-$dbHost = "app-9589fc9a-ca66-496e-86f2-10efed48b071-do-user-11129028-0.b.db.ondigitalocean.com" ;
+$dbHost = "app-e16974f1-49df-4ff7-854b-4a18ee4f9ed4-do-user-11129028-0.b.db.ondigitalocean.com" ;
 $dbUser = "scrapdb" ;
-$dbPass = "TqjMNeaQahFduEJN" ;
+$dbPass = "kUruFa19KXtojBrC" ;
 $dbName = "scrapdb" ;
 
 if(!$db = mysqli_connect($dbHost,$dbUser,$dbPass,$dbName))

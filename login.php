@@ -71,14 +71,11 @@
     
 
         
-        <form class="loginForm" action="">
+        <form class="loginForm" method="POST">
             <input class="entry first-entry" type="email" placeholder="Email Address">
             <input class="entry" type="password" placeholder="Password">
-            <a href="dashboard.html">
-                <div  class="post "><div 
-                    style="margin: auto;"
-                    class="create-text">Log In</div></div>
-            </a>
+            <input type="submit" class="post create-text" value="Login">
+            
             <div class="amnesia">
                 Forgotten password?
             </div>
@@ -93,7 +90,7 @@
 
 <div id="signup-form">
     <div class="signup">
-        <form action="POST">
+        <form method="POST">
             <div class="head"><div >Sign Up</div>
                 <span onclick="toggleSignup()" class="times">&times;</span>
             </div>
@@ -130,7 +127,7 @@
             <div class="notice">
                 By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. <br>You may receive SMS notifications from us and can opt out at any time.
             </div>
-            <button class="signup-button">Sign Up</button>
+            <input class="signup-button" type="submit" value="Sign Up" >
         
         </form>
     </div>
